@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: eureka
+
+eureka:
+  instance:
+    nonSecurePortEnabled: false
+    securePortEnabled: true
+    securePort: ${server.port}
+    statusPageUrl: http://localhost:${server.port}/info
+    healthCheckUrl: http://localhost:${server.port}/health
+    homePageUrl: http://localhost:${server.port}
+    prefer-ip-address: true
+    hostname: localhost
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    securePortEnabled: true
+    serviceUrl:
+      defaultZone: http://localhost:8090/eureka
+
+
