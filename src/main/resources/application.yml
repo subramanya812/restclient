@@ -19,4 +19,19 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8090/eureka
 
+server:
+  port: 9002
+  ssl:
+    enabled: true
+    client-auth: need
+    key-store: classpath:nt-gateway.jks
+    key-store-password: sunil45143
+    key-alias: nt-gateway
+    key-store-type: JKS
+    key-store-provider: SUN
+    trust-store: classpath:nt-gateway.jks
+    trust-store-password: sunil45143
+    trust-store-type: JKS
+
+
 
